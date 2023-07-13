@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--light);
+}
+
+:root{
+    --gray0: #111111;
+    --gray1: #242424;
+    --gray2: #333333;
+    --gray3: #464646;
+    --pink: #c61067;
+    --light: #FFFFFF;
+}
+
+.mini-title{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn{
+    min-height: 30px;
+    background-color: transparent;
+    border: 2px solid var(--pink);
+    border-radius: 5px;     
+    display: flex;
+    align-items: center;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: var(--pink);
+}
+.btn:has( box-icon ){
+    padding-right: 20px;
+}
+.btn box-icon{
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    fill: var(--light);
+}
+
+.modal{
+    width: 500px;
+    position: fixed;
+    top: 60%;
+    left: calc(50% - 250px);
+    border-radius: 10px;
+    background-color: var(--gray2);
+    padding: 16px;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 200ms;
+    transition-delay: 200ms;
+}
+.modal.active{
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+}
+.modal form{
+    width: 100%;
+}
+.modal form h3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+}
+.modal form h3 box-icon{
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    fill: var(--light);
+    cursor: pointer;
+    transition-duration: 200ms;
+    border-radius: 20px;
+    background-color: var(--gray3);
+}
+.modal form h3 box-icon:hover{
+    background-color: var(--pink);
+}
+.modal form label{
+    display: block;
+    margin-bottom: 6px;
+}
+.modal form input{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: var(--gray2);
+    border: 2px solid var(--gray3);
+    transition-duration: 200ms;
+    margin-bottom: 16px;
+}
+.modal form input:focus{
+    border-color: var(--pink);
+}
+.btn.form{
+    width: 100%;
+    line-height: 40px;
+    justify-content: center;
+}
+
+body{
+    background-color: var(--gray1);
+}
+
+header{
+    display: flex;
+    gap: 26px;
+    padding: 16px 100px;
+    align-items: center;
+}
+header .logo{
+    height: 50px;
+}
+header .logo img{
+    display: block;
+    height: 100%;
+}
+header .busca{
+    width: 500px;
+    position: relative;
+}
+header .busca input{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: var(--gray2);
+    border: 2px solid var(--gray3);
+    transition-duration: 200ms;
+}
+header .busca input:focus{
+    border-color: var(--pink);
+}
+header .busca input:focus + box-icon{
+    fill: var(--pink);
+}
+header .busca box-icon{
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    fill: var(--light);
+    position: absolute;
+    top: calc(50% - 20px);
+    right: 6px;
+    transition-duration: 200ms;
+}
+
+main{
+    padding: 60px 100px;
+}
+
+#teams h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#teams ul{
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+#teams ul li{
+    width: calc(20% - 13px); 
+    background-color: var(--gray2);
+    padding: 16px;
+    border-radius: 5px;
+}
+#teams ul li h5{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#teams ul li h5 box-icon{
+    fill: var(--light);
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+#teams ul li h5 box-icon:hover{
+    fill: var(--pink);
+}
+#teams ul li h1{
+    width: 100px;
+    height: 100px;
+    background-color: var(--gray3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 26px auto;
+    font-size: 50px;
+    font-weight: normal;
+    line-height: 50px;
+}
+
+#teams ul li h1 span{
+    font-size: 16px;
+    line-height: 16px;
+}
+#teams ul li .acoes{
+    width: 100%;
+    display: flex;
+    gap: 16px;
+}
+#teams ul li .acoes .btn:first-child{
+    flex: 1;
+    justify-content: center;
+}
+#teams ul li .acoes .btn:last-child{
+    padding-right: 0;
+}
+
+#overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--gray0);
+    transition-duration: 200ms;
+    opacity: 0;
+    visibility: hidden;
+}
+#overlay.active{
+    opacity: .85;
+    visibility: visible;
+}

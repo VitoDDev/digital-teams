@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Teams</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/digital.webp" alt="Digital Logo">
+        </div>
+        <div class="busca">
+            <input type="text" id="pesquisar" placeholder="Digite o nome do time">
+            <box-icon name='search-alt'></box-icon>
+        </div>
+    </header>
+
+    <main>
+        <section id="teams">
+            <h3>Teams
+                <button id="btnNovoTeam" class="btn">
+                    <box-icon name='plus'></box-icon>Novo Team
+                </button>
+            </h3>
+            <ul id="listaDeTeams"></ul>
+        </section>
+    </main>
+
+    <section id="overlay"></section>
+    <section id="formCriar" class="modal">
+        <form id="fc" onsubmit="adicionarTeam()">
+            <h3>Criar <box-icon id="fecharFormCriar" name='x'> </box-icon></h3>
+            <label for="teamNome" class="mini-title">Nome</label>
+            <input type="text" id="teamNome" placeholder="Digite o nome do team" required>
+            <label for="teamQtd" class="mini-title">N° de participantes</label>
+            <input type="number" id="teamQtd" min="0" required>
+            <button type="submit" class="btn form mini-title">
+                Salvar
+            </button>
+        </form>
+    </section>
+
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
