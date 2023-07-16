@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Teams</title>
+    <link rel="icon" type="image/png" href="images/Link.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -41,6 +42,23 @@
                 Salvar
             </button>
         </form>
+    </section>
+
+    <section id="mostrarParticipantes" class="modal">
+        <h3>Participantes <box-icon id="fecharParticipantes" name='x'></box-icon></h3>
+        <ul id="listaDeParticipantes"></ul>        
+    </section>
+
+    <section id="criarParticipante" class="modal">
+        <h3>Adicionar participantes <box-icon id="fecharFormParticipante" name='x'></box-icon></h3>
+        <form id="membros" onsubmit="adicionarParticipante()">
+            <input type="hidden" id="teamId">
+            <label for="participanteNome" class="mini-title">Nome</label>
+            <input type="text" id="participanteNome" placeholder="Digite o nome do participante" required>
+            <button type="submit" class="btn form mini-title">
+                Salvar
+            </button>
+    </form>
     </section>
 
 

@@ -73,13 +73,13 @@
 .modal form{
     width: 100%;
 }
-.modal form h3{
+.modal h3{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 26px;
 }
-.modal form h3 box-icon{
+.modal h3 box-icon{
     width: 40px;
     height: 40px;
     padding: 8px;
@@ -89,7 +89,7 @@
     border-radius: 20px;
     background-color: var(--gray3);
 }
-.modal form h3 box-icon:hover{
+.modal h3 box-icon:hover{
     background-color: var(--pink);
 }
 .modal form label{
@@ -109,6 +109,29 @@
 .modal form input:focus{
     border-color: var(--pink);
 }
+.modal ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    background-color: var(--gray3);
+    padding: 6px;
+}
+.modal ul li box-icon{
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    fill: var(--light);
+    cursor: pointer;
+    transition-duration: 200ms;
+    border-radius: 20px;
+    background-color: var(--gray3);
+}
+.modal ul li box-icon:hover{
+    background-color: var(--pink);
+}
+
 .btn.form{
     width: 100%;
     line-height: 40px;
@@ -182,6 +205,10 @@ main{
     background-color: var(--gray2);
     padding: 16px;
     border-radius: 5px;
+}
+#teams ul li.empty{
+    width: 100%;
+    text-align: center;
 }
 #teams ul li h5{
     display: flex;
